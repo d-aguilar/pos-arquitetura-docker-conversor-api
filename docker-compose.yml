@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  pos.conversor.api:
+    image: ${DOCKER_REGISTRY}posconversorapi
+    build:
+      context: .
+      dockerfile: Pos.Conversor.API\Dockerfile
