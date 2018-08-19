@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.PlatformAbstractions;
 
 namespace Pos.Conversor.API
 {
@@ -18,10 +20,17 @@ namespace Pos.Conversor.API
             services.AddMvc();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("API de Conversões", new Swashbuckle.AspNetCore.Swagger.Info()
+                c.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info()
                 {
-                    
+                    Title = "API de Conversões",
+                    Version = "v1"
                 });
+
+                var caminhoAplicacao = PlatformServices.Default.Application.ApplicationBasePath;
+                var nomeAplicacao = PlatformServices.Default.Application.ApplicationName;
+                var caminhoXmlDoc = Path.Combine(caminhoAplicacao, $"{nomeAplicacao}.xml");
+
+                c.IncludeXmlComments(caminhoXmlDoc);
             });
         }
 
