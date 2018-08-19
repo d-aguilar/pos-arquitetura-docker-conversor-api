@@ -1,8 +1,8 @@
-version: '3.4'
+version: '3'
 
 services:
-  pos.conversor.api:
-    image: ${DOCKER_REGISTRY}posconversorapi
+  pos.arquitetura.docker.conversor.api:
+    image: pos.arquitetura.docker.conversor.api
     build:
-      context: .
-      dockerfile: Pos.Conversor.API\Dockerfile
+      context: ./Pos.Arquitetura.Docker.Conversor.API
+      dockerfile: Dockerfile

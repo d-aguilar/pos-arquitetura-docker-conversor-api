@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:50218/",
+      "applicationUrl": "http://localhost:50147/",
       "sslPort": 0
     }
   },
@@ -11,17 +11,19 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
+      "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Pos.Conversor.API": {
+    "Pos.Arquitetura.Docker.Conversor.API": {
       "commandName": "Project",
       "launchBrowser": true,
+      "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:50219/"
+      "applicationUrl": "http://localhost:50148/"
     }
   }
 }

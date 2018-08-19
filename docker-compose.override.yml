@@ -1,13 +1,8 @@
-version: '3.4'
+version: '3'
 
 services:
-  pos.conversor.api:
+  pos.arquitetura.docker.conversor.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
-
-networks:
-  default:
-    external:
-      name: nat

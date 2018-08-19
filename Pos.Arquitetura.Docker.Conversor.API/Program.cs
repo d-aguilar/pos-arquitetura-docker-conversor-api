@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Pos.Conversor.API
+namespace Pos.Arquitetura.Docker.Conversor.API
 {
     public class Program
     {
